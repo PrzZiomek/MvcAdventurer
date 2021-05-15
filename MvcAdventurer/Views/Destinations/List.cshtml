@@ -1,0 +1,16 @@
+﻿@model MvcAdventurer.ViewModels.DestinationsViewModel
+
+@{
+    ViewBag.Title = "List";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+
+<h2>Destinations</h2>
+
+<ul>
+    @foreach (var destination in Model.Destinations)
+    {
+        <li> @destination.Name </li>
+    }
+</ul>
+

@@ -1,0 +1,74 @@
+﻿body {
+    padding: 10px;
+}
+
+
+input,
+select,
+textarea {
+    max-width: 280px;
+}
+
+
+.wrapper{
+   height: 600px;
+}
+
+
+nav {
+    height: 15%;
+    width: 70%;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+nav > ul {
+    width: 50%;
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.navbar-left item,
+.navbar-right item {
+    text-decoration: none;
+}
+
+.title{
+    width: 50%;
+}
+
+main {
+    display: flex;
+    width: 100%;
+    height: 70%;
+}
+
+.destinations {
+    width: 50%;
+    background-color: whitesmoke;
+}
+
+.navbar-left item:hover{
+    color: dimgrey;
+}
+
+.navbar-right item:hover {
+    color: dimgray;
+}
+
+.navbar-right {
+    width: 30%
+}
+
+.navbar-left {
+    width: 45%
+}
+
+
+
+footer {
+    width: 100%;
+    height: 15%;
+}

@@ -15,18 +15,7 @@ namespace MvcAdventurer
 
 
             routes.MapMvcAttributeRoutes();
-            /*  routes.MapRoute(
-                   "destinationsByRegions",
-                   "destinations/region/{name}",
-                   new { controller ="Destinations", action = "ByRegions" }  
-               //    new { name = @"\a-z" }
-                  );
            
-            routes.MapRoute(
-                "destinationsList",
-                 "destinations/list",
-                  new { controller = "Destinations", action = "List" }
-                ); */
             routes.MapRoute(
                 name: "Default",
                 url: "{controller}/{action}/{id}",

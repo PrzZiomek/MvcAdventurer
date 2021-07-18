@@ -9,7 +9,7 @@ namespace MvcAdventurer.ViewModels
 {
     public class DestinationsViewModel
     {
-        public List<Destination> Destinations { get; set; }
+        public List<DestinationModel> Destinations { get; set; }
 
     }
 }

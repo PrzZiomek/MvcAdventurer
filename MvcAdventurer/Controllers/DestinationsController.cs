@@ -4,7 +4,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
-using MvcAdventurer.Models;
+using DataLibrary.Models; 
 using MvcAdventurer.ViewModels;
 using MySql.Data.MySqlClient;
 using System.Data;
@@ -31,22 +31,24 @@ namespace MvcAdventurer.Controllers
             HtmlDocument doc = new HtmlDocument();
             doc.LoadHtml(htmlPage);
             var nodes = doc.DocumentNode.SelectNodes("//p");
-            foreach (HtmlNode node in nodes)
-                System.Diagnostics.Debug.WriteLine(node.InnerText);
+            var nodesCont = nodes.Select(x => x.InnerText).ToArray();
+            string name = nodesCont[2].Split(' ')[0];     //    System.Diagnostics.Debug.WriteLine(nodesCont[2]);
+            var destModel = new DestinationModel
+               {
+                   Name = name,
+                   History = string.Concat(nodesCont[3], nodesCont[4]),
+                   Characteristic = nodesCont[5]
+               };
 
-            return Content("here will be soon some random destination");
+            return View(destModel); 
         }
 
         [Route("destinations/list")]
         public ActionResult List()
         {
 
-            var viewModel = new DestinationsViewModel
-        {
-            Destinations = new List<DestinationModel> { },
-        };  
-
-            return View(viewModel);
+          
+            return Content("here will be the list of dests");
     }
 
 

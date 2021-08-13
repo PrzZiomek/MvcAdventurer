@@ -14,7 +14,8 @@ namespace MvcAdventurer
     {
         protected void Application_Start()
         {
-           // Database.SetInitializer<DestinationContext>(null);
+            // Database.SetInitializer<DestinationContext>(null);
+            BundleConfig.RegisterBundles(BundleTable.Bundles);
             AreaRegistration.RegisterAllAreas();
             FilterConfig.RegisterGlobalFilters(GlobalFilters.Filters);
             RouteConfig.RegisterRoutes(RouteTable.Routes);

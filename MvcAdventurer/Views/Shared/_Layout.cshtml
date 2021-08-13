@@ -4,18 +4,20 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>@ViewBag.Title - My ASP.NET Application</title>
-    @Styles.Render("~/Content/css")
+    @using System.Web.Optimization
+    @Styles.Render("~/Bundle/sass")
    @Scripts.Render("~/bundles/modernizr")
 
 </head>
 <body>
-    <div class="wrapper">
+    <div class="wrapper"> 
         @Html.Partial("_NavBar")
-
-        <main>
-            @RenderBody()
-            <div class="destinations"></div>
-        </main>
+        <div class="central">
+            <main>
+                @RenderBody()
+            </main>
+            <aside class="destinations"></aside>
+        </div>
         <footer>
             <p>&copy; @DateTime.Now.Year - by Przemek Ziomek</p>
         </footer>

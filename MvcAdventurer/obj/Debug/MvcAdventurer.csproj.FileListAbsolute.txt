@@ -101,7 +101,6 @@ C:\Users\ziome\source\repos\MvcAdventurer\MvcAdventurer\bin\Microsoft.Owin.Secur
 C:\Users\ziome\source\repos\MvcAdventurer\MvcAdventurer\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
 C:\Users\ziome\source\repos\MvcAdventurer\MvcAdventurer\bin\Microsoft.Owin.Security.OAuth.xml
 C:\Users\ziome\source\repos\MvcAdventurer\MvcAdventurer\bin\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.xml
-C:\Users\ziome\source\repos\MvcAdventurer\MvcAdventurer\obj\Debug\MvcAdventurer.csprojAssemblyReference.cache
 C:\Users\ziome\source\repos\MvcAdventurer\MvcAdventurer\obj\Debug\MvcAdventurer.csproj.CoreCompileInputs.cache
 C:\Users\ziome\source\repos\MvcAdventurer\MvcAdventurer\obj\Debug\MvcAdventurer.csproj.CopyComplete
 C:\Users\ziome\source\repos\MvcAdventurer\MvcAdventurer\obj\Debug\MvcAdventurer.dll
@@ -144,3 +143,17 @@ C:\Users\ziome\source\repos\MvcAdventurer\MvcAdventurer\bin\System.Net.Http.Form
 C:\Users\ziome\source\repos\MvcAdventurer\MvcAdventurer\bin\HtmlAgilityPack.dll
 C:\Users\ziome\source\repos\MvcAdventurer\MvcAdventurer\bin\HtmlAgilityPack.pdb
 C:\Users\ziome\source\repos\MvcAdventurer\MvcAdventurer\bin\HtmlAgilityPack.xml
+C:\Users\ziome\source\repos\MvcAdventurer\MvcAdventurer\bin\DataLibrary.dll
+C:\Users\ziome\source\repos\MvcAdventurer\MvcAdventurer\bin\DataLibrary.pdb
+C:\Users\ziome\source\repos\MvcAdventurer\MvcAdventurer\obj\Debug\MvcAdventurer.csproj.AssemblyReference.cache
+C:\Users\ziome\source\repos\MvcAdventurer\MvcAdventurer\bin\x64\libsass.dll
+C:\Users\ziome\source\repos\MvcAdventurer\MvcAdventurer\bin\AdvancedStringBuilder.dll
+C:\Users\ziome\source\repos\MvcAdventurer\MvcAdventurer\bin\BundleTransformer.Core.dll
+C:\Users\ziome\source\repos\MvcAdventurer\MvcAdventurer\bin\BundleTransformer.SassAndScss.dll
+C:\Users\ziome\source\repos\MvcAdventurer\MvcAdventurer\bin\LibSassHost.dll
+C:\Users\ziome\source\repos\MvcAdventurer\MvcAdventurer\bin\AdvancedStringBuilder.xml
+C:\Users\ziome\source\repos\MvcAdventurer\MvcAdventurer\bin\BundleTransformer.Core.xml
+C:\Users\ziome\source\repos\MvcAdventurer\MvcAdventurer\bin\BundleTransformer.SassAndScss.xml
+C:\Users\ziome\source\repos\MvcAdventurer\MvcAdventurer\bin\LibSassHost.xml
+C:\Users\ziome\source\repos\MvcAdventurer\MvcAdventurer\bin\ru-ru\BundleTransformer.Core.resources.dll
+C:\Users\ziome\source\repos\MvcAdventurer\MvcAdventurer\bin\x86\libsass.dll

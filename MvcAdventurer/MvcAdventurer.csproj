@@ -262,8 +262,10 @@
     <Compile Include="ViewModels\RandomCountryViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Content\MyCssStyles\Layout.scss" />
-    <None Include="Content\MyCssStyles\Random.scss" />
+    <None Include="Content\MyCssStyles\_Layout.scss" />
+    <None Include="Content\MyCssStyles\_Random.scss" />
+    <None Include="Content\MyCssStyles\_navbar.scss" />
+    <None Include="Content\MyCssStyles\_Home.scss" />
     <Content Include="favicon.ico" />
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
@@ -271,6 +273,7 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <Content Include="appsettings.json" />
     <Content Include="Content\MyCssStyles\main.scss" />
+    <Content Include="Content\MyCssStyles\_reset.scss" />
     <None Include="Scripts\jquery-3.4.1.intellisense.js" />
     <Content Include="Scripts\jquery-3.4.1.js" />
     <Content Include="Scripts\jquery-3.4.1.min.js" />

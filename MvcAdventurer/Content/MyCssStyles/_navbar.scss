@@ -1,0 +1,43 @@
+﻿
+
+.navbar-main__nav {
+    width: 450px;
+    align-items: center;
+    display: flex;
+    justify-content: space-evenly;
+}
+
+.navbar-main__nav > ul {
+    display: flex;
+    justify-content: space-between;
+    list-style: none;
+}
+
+.navbar-main__nav a{
+    text-decoration: none;
+    transition: 0.5s;
+    color:black;
+}
+
+.navbar-main__nav a:hover {
+    border-bottom: 2px solid cadetblue;
+    color: cadetblue;
+}
+
+.navbar-right__ul li:last-child {
+    margin-right: 40px;
+}
+
+
+.title {
+    width: 50%;
+}
+
+
+.navbar-right__ul {
+    width: 42%
+}
+
+.navbar-left__ul {
+    width: 47%
+}

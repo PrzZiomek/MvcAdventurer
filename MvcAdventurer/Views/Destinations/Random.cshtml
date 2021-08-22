@@ -1,19 +1,39 @@
 ﻿@model DataLibrary.Models.DestinationModel
 
-@Styles.Render("~/Content/MyCssStyles/Random.scss")
 @{
     ViewBag.Title = "Random";
-    Layout = "~/Views/Shared/_Layout.cshtml";
+
 }
-<h2>@Model.Name</h2>
-<section class="characteristics">
-    <h3>Characteristics:</h3>
-    <p>@Model.Characteristic</p>
-</section>
-<section class="history">
-    <h3>History:</h3>
-    <p>@Model.History</p>
-</section>
+<div class="random-wrapper__div">
+    <h1>@Model.Name</h1>
+    <main class="random-main__main">
+        <section class="random-info__section">
+            <div class="random-characteristics__div">
+                <h2>Characteristics</h2>
+                <p>@Model.Characteristic</p>
+            </div>
+            <div class="random-history__div">
+                <h2>History</h2>
+                <p>@Model.History</p>
+            </div>
+        </section>
+        <section class="random-places__section">
+            <ul>
+                <li><a href="#">Lviv</a></li>
+                <li><a href="#">Kamieniec Podolski Castle</a></li>
+                <li><a href="#">Odessa</a></li>
+                <li><a href="#">Lake Lemuria</a></li>
+                <li><a href="#">St. Sophia's Cathedral</a></li>
+            </ul>
+        </section>
+        <section class="random-pics__section">
+            <div class="picture">img 1</div>
+            <div class="picture">img 2</div>
+            <div class="picture">img 3</div>
+        </section>
+    </main>
+</div>
+
 
 
 

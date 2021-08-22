@@ -1,0 +1,56 @@
+﻿.random-wrapper__div {
+    height: 80%;
+}
+
+.random-wrapper__div h1 {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    width: 30px;
+    height: 15%;
+    font-size: 2rem;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+}
+
+.random-main__main h2 {
+    padding: 2% 0;
+}
+
+
+.random-main__main {
+    height: 80%;
+    display: flex;
+}
+
+.random-main__main > section {
+    flex: 1 1 0;
+    /*height: 80%; */
+    padding: 2%;
+    background-color: aqua;
+}
+
+.random-main__main section > div {
+    height: 50%;
+    overflow: hidden;
+}
+
+.random-places__section > ul {
+    list-style-type: square;
+    margin-bottom: 4%;
+}
+
+.random-places__section a {
+    text-decoration: none;
+}
+
+/*
+.characteristics{
+    
+}
+
+.history {
+    height: 50%;
+}
+
+    */

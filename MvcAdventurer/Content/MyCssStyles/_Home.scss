@@ -7,13 +7,19 @@
 }
 
 .home-title__div {
-    padding: 10px;
+    padding: 30px 0px;
 }
 
 .home-title__div > h1{
     font-size: 2rem;
     padding: 0 0 10px 10px;
 }
+
+.home-title__div > h2 {
+    margin-left: 10px;
+}
+
+
 
 .home-central__div {
     display: flex;

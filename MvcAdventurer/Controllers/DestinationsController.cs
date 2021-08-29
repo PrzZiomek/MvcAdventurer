@@ -25,7 +25,7 @@ namespace MvcAdventurer.Controllers
         {
             var task = new CustomTasks();
             var data = await task.GetWikiApiData();
-            var pages = data.Root.query.pages.Values;
+            var pages = data.query.pages.Values;
             var exstractedPages = pages.Select(x => x.extract).ToList();
             string htmlPage = exstractedPages[0];
             HtmlDocument doc = new HtmlDocument();
@@ -33,17 +33,14 @@ namespace MvcAdventurer.Controllers
             var nodes = doc.DocumentNode.SelectNodes("//p");
             var nodesCont = nodes.Select(x => x.InnerText).ToArray();
             string name = nodesCont[2].Split(' ')[0];     //    System.Diagnostics.Debug.WriteLine(nodesCont[2]);
-            var images = data.Images;
-
             var destModel = new DestinationModel
-                 {
-                     Name =  name,
-                     History = string.Concat(nodesCont[3], nodesCont[4]),
-                     Characteristic = nodesCont[5],
-                     Images = images
-                 };
-           
-             return View(destModel); 
+               {
+                   Name = name,
+                   History = string.Concat(nodesCont[3], nodesCont[4]),
+                   Characteristic = nodesCont[5]
+               };
+
+            return View(destModel); 
         }
 
         [Route("destinations/list")]

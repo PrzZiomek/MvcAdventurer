@@ -157,13 +157,3 @@ C:\Users\ziome\source\repos\MvcAdventurer\MvcAdventurer\bin\BundleTransformer.Sa
 C:\Users\ziome\source\repos\MvcAdventurer\MvcAdventurer\bin\LibSassHost.xml
 C:\Users\ziome\source\repos\MvcAdventurer\MvcAdventurer\bin\ru-ru\BundleTransformer.Core.resources.dll
 C:\Users\ziome\source\repos\MvcAdventurer\MvcAdventurer\bin\x86\libsass.dll
-C:\Users\ziome\source\repos\MvcAdventurer\MvcAdventurer\bin\ICSharpCode.SharpZipLib.dll
-C:\Users\ziome\source\repos\MvcAdventurer\MvcAdventurer\bin\NPOI.dll
-C:\Users\ziome\source\repos\MvcAdventurer\MvcAdventurer\bin\NPOI.OOXML.dll
-C:\Users\ziome\source\repos\MvcAdventurer\MvcAdventurer\bin\NPOI.OpenXml4Net.dll
-C:\Users\ziome\source\repos\MvcAdventurer\MvcAdventurer\bin\NPOI.OpenXmlFormats.dll
-C:\Users\ziome\source\repos\MvcAdventurer\MvcAdventurer\bin\BouncyCastle.Crypto.xml
-C:\Users\ziome\source\repos\MvcAdventurer\MvcAdventurer\bin\ICSharpCode.SharpZipLib.pdb
-C:\Users\ziome\source\repos\MvcAdventurer\MvcAdventurer\bin\ICSharpCode.SharpZipLib.xml
-C:\Users\ziome\source\repos\MvcAdventurer\MvcAdventurer\bin\NPOI.xml
-C:\Users\ziome\source\repos\MvcAdventurer\MvcAdventurer\bin\NPOI.OOXML.xml

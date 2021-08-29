@@ -1,17 +1,16 @@
 ﻿.random-wrapper__div {
     height: 80%;
-    padding-top: 20px
 }
 
 .random-wrapper__div h1 {
+    position: absolute;
+    top: 10%;
+    right: 10%;
+    width: 30px;
+    height: 15%;
     font-size: 2rem;
     text-transform: uppercase;
     letter-spacing: 2px;
-    position: absolute;
-    width: 200px;
-    height: 50px;
-    top: 20px;
-    right: 20px;
 }
 
 .random-main__main h2 {
@@ -32,6 +31,7 @@
 }
 
 .random-main__main section > div {
+    height: 50%;
     overflow: hidden;
 }
 
@@ -44,24 +44,11 @@
     text-decoration: none;
 }
 
-
-.random-characteristics__div > h2{
-    font-size: 1.2rem;
-}
-
-.random-info__section > div{
-    margin: 10px 0;
-}
-
-.random-info__section p {
-    word-wrap: break-word;
-    max-height: calc(10 * 1rem);
-    line-height: 1rem;
-    text-overflow: ellipsis;
-}
-
-
 /*
+.characteristics{
+    
+}
+
 .history {
     height: 50%;
 }

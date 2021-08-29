@@ -1,4 +1,5 @@
-﻿using System.Collections.Generic;
+﻿using Newtonsoft.Json.Linq;
+using System.Collections.Generic;
 
 
 
@@ -14,10 +15,15 @@ namespace MvcAdventurer.Models
         public string extract { get; set; }
     }
 
-
-    public class Query
+     public class Query
     {
         public Dictionary<string, PageVal> pages { get; set; }
+
+    }
+    public class QueryImg
+    {
+        public JObject pages { get; set; }
+
     }
 
     public class Limits
@@ -25,11 +31,28 @@ namespace MvcAdventurer.Models
         public int extracts { get; set; }
     }
 
-    public class RootObject
+    public class RootResObject
     {
         public string batchcomplete { get; set; }
         public Query query { get; set; }
         public Limits limits { get; set; }
 
+    }
+
+    public class ImageResObject
+    {
+        public QueryImg query { get; set; }
+    }
+
+  /*  public class ImageObject
+    {
+        public int ns { get; set; }
+        public string title { get; set; }
+    }
+  */
+    public class WikiApiResponseObj
+    {
+        public RootResObject Root { get; set; }
+        public JArray Images { get; set; }
     }
 }

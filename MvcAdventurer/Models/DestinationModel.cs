@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json.Linq;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
@@ -13,6 +14,7 @@ namespace MvcAdventurer.Models
         public string Name { get; set; }
         public string Characteristic { get; set; }
         public string History { get; set; }
+        public JArray Images { get; set; }
 
         public override string ToString()
         {

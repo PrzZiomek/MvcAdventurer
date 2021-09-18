@@ -25,7 +25,7 @@ namespace MvcAdventurer.Controllers
         {
             var task = new CustomTasks();
             var data = await task.GetWikiApiData();
-            var pages = data.query.pages.Values;
+            var pages = data.Root.query.pages.Values;
             var exstractedPages = pages.Select(x => x.extract).ToList();
             string htmlPage = exstractedPages[0];
             HtmlDocument doc = new HtmlDocument();
@@ -45,11 +45,9 @@ namespace MvcAdventurer.Controllers
 
         [Route("destinations/list")]
         public ActionResult List()
-        {
-
-          
+        {         
             return Content("here will be the list of dests");
-    }
+        }
 
 
         [Route("destinations/region/{name}")]

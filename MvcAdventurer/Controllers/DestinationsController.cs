@@ -13,7 +13,6 @@ using System.Net.Http;
 using System.Net.Http.Headers;
 using System.Threading.Tasks;
 using System.Net;
-using Newtonsoft.Json;
 using HtmlAgilityPack;
 
 
@@ -23,24 +22,9 @@ namespace MvcAdventurer.Controllers
     {
         public async Task<ActionResult> Random()
         {
-            var task = new CustomTasks();
-            var data = await task.GetWikiApiData();
-            var pages = data.Root.query.pages.Values;
-            var exstractedPages = pages.Select(x => x.extract).ToList();
-            string htmlPage = exstractedPages[0];
-            HtmlDocument doc = new HtmlDocument();
-            doc.LoadHtml(htmlPage);
-            var nodes = doc.DocumentNode.SelectNodes("//p");
-            var nodesCont = nodes.Select(x => x.InnerText).ToArray();
-            string name = nodesCont[2].Split(' ')[0];     //    System.Diagnostics.Debug.WriteLine(nodesCont[2]);
-            var destModel = new DestinationModel
-               {
-                   Name = name,
-                   History = string.Concat(nodesCont[3], nodesCont[4]),
-                   Characteristic = nodesCont[5]
-               };
+            await GetDestinationData("Ukraine");
 
-            return View(destModel); 
+            return View(); 
         }
 
         [Route("destinations/list")]
@@ -54,6 +38,32 @@ namespace MvcAdventurer.Controllers
         public ActionResult ByRegions(string name)
         {
             return Content(name);
+        }
+
+        public async Task<object> GetDestinationData(string name)
+        {
+            var task = new CustomTasks();
+            var data = await task.CallWikiApiData(name);
+            var pages = data.Root.query.pages.Values;
+            var images = data.Images;
+            dynamic co = data.Coordinates[0];
+            var coordinates = new {
+                lat = co.lat,
+                lon = co.lon 
+            }; 
+            var exstractedPages = pages.Select(x => x.extract).ToList();
+            string htmlPage = exstractedPages[0];
+            HtmlDocument doc = new HtmlDocument();
+            doc.LoadHtml(htmlPage);
+            var nodes = doc.DocumentNode.SelectNodes("//p");
+            string[] nodesCont = nodes.Select(x => x.InnerText).ToArray();
+            var destination = new {
+                Characteristic = string.Join<string>(" ", nodesCont),
+                Images = images,
+                Coordinates = coordinates
+            };
+
+            return destination;
         }
     }
 }

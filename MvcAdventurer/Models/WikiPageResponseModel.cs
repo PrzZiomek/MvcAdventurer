@@ -26,6 +26,12 @@ namespace MvcAdventurer.Models
 
     }
 
+    public class QueryCoordinates
+    {
+        public JObject pages { get; set; }
+
+    }
+
     public class Limits
     {
         public int extracts { get; set; }
@@ -44,15 +50,15 @@ namespace MvcAdventurer.Models
         public QueryImg query { get; set; }
     }
 
-  /*  public class ImageObject
+    public class CoordinatesResObject
     {
-        public int ns { get; set; }
-        public string title { get; set; }
+        public QueryCoordinates query { get; set; }
     }
-  */
+
     public class WikiApiResponseObj
     {
         public RootResObject Root { get; set; }
         public JArray Images { get; set; }
+        public JArray Coordinates { get; set; }
     }
 }

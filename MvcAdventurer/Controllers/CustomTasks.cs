@@ -16,24 +16,33 @@ namespace MvcAdventurer.Controllers
 {
     class CustomTasks
     {
-        public async Task<WikiApiResponseObj> GetWikiApiData()
-        {
-            var pageUrl = "https://en.wikipedia.org/w/api.php?action=query&titles=Ukraine&prop=extracts&format=json&exintro=1";
-            var pageImagesUrl = "https://en.wikipedia.org/w/api.php?action=query&titles=Ukraine&prop=images&format=json";
+        public async Task<WikiApiResponseObj> CallWikiApiData(string name)
+        {   
+            string pageUrl = $"https://en.wikipedia.org/w/api.php?action=query&titles={name}&prop=extracts&format=json&exintro=1";
+            string pageImagesUrl = $"https://en.wikipedia.org/w/api.php?action=query&titles={name}&prop=images&format=json";
+            string pageCoordinatesUrl = $"https://en.wikipedia.org/w/api.php?action=query&titles={name}&prop=coordinates&format=json";
 
             try
             {
                 var res = await getApiResponse<RootResObject>(pageUrl);
-                int pageId = res.query.pages.Values.Single().pageid;
                 var imagesRes = await getApiResponse<ImageResObject>(pageImagesUrl);
+                var coordinatesRes = await getApiResponse<CoordinatesResObject>(pageCoordinatesUrl);
+
+                int pageId = res.query.pages.Values.Single().pageid;
                 var images = imagesRes.query.pages
                   .Value<JObject>(pageId.ToString())
                   .Value<JArray>("images");
+                var coordinates = coordinatesRes.query.pages
+                  .Value<JObject>(pageId.ToString())
+                  .Value<JArray>("coordinates");
+
                 var responseObj = new WikiApiResponseObj
                 {
                     Root = res,
-                    Images = images
+                    Images = images,
+                    Coordinates = coordinates 
                 };
+
                 return responseObj;
             }
             catch (HttpRequestException e)
@@ -43,7 +52,7 @@ namespace MvcAdventurer.Controllers
             }
             return null;
         }
-
+ 
         private async Task<T> getApiResponse<T>(string pageUrl)
         {
             var httpClient = HttpClientFactory.Create();
